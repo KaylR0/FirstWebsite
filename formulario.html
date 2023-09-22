@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords"
+		content="Indonesia, pais, curiosidades, Sumatra, Java, tigre de Sumatra, turismo, tradiciones">
+	<meta name="author" content="Ionut Florin Cercel">
+	<meta name="description" content="Registro para recibir todo tipo de actualizaciones sobre nuestra web" />
+	<link rel="icon" type="image/x-icon" href="imagenes/icon.ico">
+	<link rel="stylesheet" type="text/css" href="estilos/style.css">
+	<title>Contacto</title>
+</head>
+
+<body class="bg">
+	<header id="inicio">
+		<div class="navbar">
+			<a href="index.html"><img class="home" src="imagenes/homegreen.png" alt="home"></a>
+			<a href="personajes_importantes.html">Personajes importantes</a>
+			<a href="imagenes.html">Imágenes</a>
+			<a href="enlaces_y_videos.html">Enlaces interesantes</a>
+			<a href="formulario.html">Suscríbete</a>
+		</div>
+		<div>
+			<img src="imagenes/encabezado_formulario.jpg" alt="Rafflesia arnoldii">
+		</div>
+	</header>
+	<main>
+		<aside>
+			<div>
+				<audio controls loop>
+					<source src="audio/Beautiful_Indonesia.mp3" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="navbar">
+				<div class="dropdown">
+					<button class="dropbtn">Navegar</button>
+					<div class="dropdown-content">
+						<a href="index.html"><img class="home" src="imagenes/homegreen.png" alt="home"></a>
+						<a href="personajes_importantes.html">Personajes importantes</a>
+						<a href="imagenes.html">Imágenes</a>
+						<a href="enlaces_y_videos.html">Enlaces interesantes</a>
+						<a href="formulario.html">Suscríbete</a>
+					</div>
+				</div>
+			</div>
+
+		</aside>
+		<section>
+			<article>
+				<div>
+					<b class="titulo">
+						<p class="parrafo">¿Quieres enterarte de todas las novedades?</br>Suscríbete aquí:</p>
+					</b>
+					<form action="agradecimiento.html" method="post">
+						<!--Sé que en ACTION tendría que poner el archivo "datos.php" pero como no existe la base de datos y no quería 
+							usar scripts, he creado AGRADECIMIENTO.HTML para que me quedara bonita y bien conectada la página-->
+						<ul class="form" id="letrasFormulario">
+							<li>
+								<label for="name">Nombre:</label>
+								<input type="text" id="name" name="nombre" placeholder="Nombre y Apellido" required>
+								<abbr class="abbr" title="Este campo es obligatorio" aria-label="required"> *</abbr>
+							</li>
+							<li>
+								<label for="user">Usuario:</label>
+								<input type="text" id="user" name="usuario" placeholder="Usuario" minlength="6"
+									maxlength="12">
+							</li>
+							<li>
+								<label for="mail">Correo electrónico:</label>
+								<input type="email" id="mail" name="email" placeholder="correo@correo.com" required>
+								<abbr class="abbr" title="Este campo es obligatorio" aria-label="required"> *</abbr>
+							</li>
+							<li>
+								<label for="password" class="label">Contraseña:</label>
+								<input type="password" id="password" name="contrasena" placeholder="Contraseña"
+									required>
+								<abbr class="abbr" title="Este campo es obligatorio" aria-label="required"> *</abbr>
+							</li>
+							<li>
+								<label for="password_confirm" class="label">Confirmar contraseña:</label>
+								<input type="password" id="password_confirm" name="confirmarcontrasena"
+									placeholder="Confirmar contraseña" required>
+								<abbr class="abbr" title="Este campo es obligatorio" aria-label="required"> *</abbr>
+							</li>
+
+							<fieldset>
+								<legend id="redirect">¿Aceptas la <a href="formulario.html#redirect">Política de
+										Privacidad</a>?<abbr class="abbr" title="Este campo es obligatorio"
+										aria-label="required"> *</abbr></legend>
+								<input type="checkbox" required name="politica" id="politica" value="Acepto">
+								<label for="politica">Acepto</label>
+								<legend>¿Quieres recibir novedades al correo?</legend>
+								<input type="checkbox" name="newsletter" id="newsletter" value="Sí">
+								<label for="newsletter">Sí</label>
+							</fieldset>
+							<li class="button">
+								<button type="submit" id="enviar">Registrarme</button>
+							</li>
+							<li class="button">
+								<button type="reset">Borrar</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+
+			</article>
+
+		</section>
+
+	</main>
+	<footer>
+		<div>
+			<p>Copyright &#169; 2022</p>
+		</div>
+		<div>
+			<a href="https://es.wikipedia.org/wiki/Indonesia#Geograf%C3%ADa">Geografía</a>
+			<a href="https://hmong.es/wiki/Cuisine_of_Indonesia">Cocina</a>
+			<a href="https://hmong.es/wiki/Religion_in_Indonesia">Religión</a>
+			<a href="https://hmong.es/wiki/Traditions_of_Indonesia">Tradiciones</a>
+		</div>
+		<div>
+			<a href="https://hmong.es/wiki/History_of_Indonesia">Historia</a>
+			<a href="https://es.wikipedia.org/wiki/Cultura_de_Indonesia">Cultura</a>
+			<a href="https://es.wikipedia.org/wiki/Fauna_de_Indonesia">Fauna</a>
+			<a href="https://es.wikipedia.org/wiki/Flora_de_Indonesia">Flora</a>
+		</div>
+		<div>
+			<a href="index.html#dondeesta">Ir a "¿Dónde está?"</a>
+			<a href="index.html#sucocina">Ir a "Su cocina"</a>
+			<a href="index.html#sustradiciones">Ir a "Sus tradiciones"</a>
+			<a href="index.html#suhistoria">Ir a "Su historia"</a>
+		</div>
+		<div>
+			<a href="#inicio">Ir arriba</a>
+			<a href="mailto:correodeejemplo@example.com">correo@example.com</a>
+			<a href="contactar.html">Contactar</a>
+		</div>
+	</footer>
+</body>
+
+</html>

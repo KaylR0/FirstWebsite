@@ -1,0 +1,472 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+/*En este proyecto el "BODY" se divide en "HEADER"-"MAIN"-"FOOTER". 
+Las divisiones en el header y en el footer vienen dadas con "DIV", 
+mientras que el main lo separamos en "ASIDE"-"SECTION", donde aside nos servirá para tener una "NAVBAR" fija
+y section para contener "ARTICLES" con DIVs de imágenes y texto*/
+
+body, html {
+  margin: 0rem;
+}
+/*FONDO*/
+.bg {
+  background-image: url("../imagenes/fondo.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 80%;
+}
+
+/*HEADER*/
+header {
+  display:flex;
+  flex-direction: column;
+  background-color: none;
+  width: 100%;
+}
+header img {
+  width: 100%;
+  padding-bottom: 23vw;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+
+/*BARRAS DE NAVEGACIÓN*/
+.navbar {
+  display:flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.navbar a {
+  flex:20%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition:background-color .5s;
+  padding:1vw;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  text-decoration: none;
+}
+.dropdown {
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 1rem;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.7);
+  font-family: 'Raleway', sans-serif;
+  transition:background-color .5s;
+  margin: 0.1rem;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(144, 238, 144, 0.7);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.281);
+  min-width: 5rem;
+  box-shadow: 0rem 0.5rem 2rem 0rem rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: rgba(144, 238, 144, 0.7);
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+/*icono de "home"*/
+.home{
+  width: 2rem;
+  padding: 0; 
+  background-color:rgba(0, 0, 0, 0);
+  filter: contrast(0.6);
+}
+
+/*AUDIO*/
+audio {
+  margin: 0.1rem;
+}
+audio::-webkit-media-controls-panel {
+  background-color: lightgreen;
+}
+audio::-webkit-media-controls-current-time-display {
+  color: rgb(236, 255, 238);
+}
+
+/*SECCIONES*/
+main {
+  display:flex;
+  flex-direction: row;
+}/*el main contiene el aside y la section dandoles display flex*/
+aside {
+  display: flex;
+  flex-direction: column;
+  flex:10%;
+  height: 100%;
+  position:sticky;
+  top: 1rem;
+  padding-top: 1vw;
+}
+section {
+  flex:90%;
+}
+article {
+  display: flex;
+  flex-direction: column;
+}
+article img {
+  display:flex;
+  text-align: center;
+  margin: 0rem auto;
+  width: 30%;
+}
+
+/*TEXTOS, CABECERAS Y PÁRRAFOS*/
+.left {
+  text-align: left;
+  padding-left: 3rem;
+}
+.right {
+  text-align: right;
+  padding-right: 3rem;
+}
+h1 {
+  margin: 1rem 7rem;
+  color: #EDF7E4;
+  font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+}
+h2 {  
+  margin: 2rem;
+  color: #EDF7E4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  text-align: left;
+}
+h3 {
+  margin: 2rem;
+  color: #EDF7E4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.parrafo {
+  border: 2px solid rgba(144, 238, 144, 0.7);
+  color: #EAFFD7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 130%;
+  padding: 2rem;
+  margin: 2.3vw;
+  border-radius: 1rem;
+}
+p a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0.05rem 0.05rem 0.05rem black;
+  cursor: pointer;
+}
+p a:link {
+  color: #C0F0A7;
+}
+p a:visited {
+  color: rgba(27, 29, 27, 0.74);
+}
+p a:hover {
+  color: lightgreen;
+}
+p a:active{
+  color: rgb(216, 255, 144);
+}
+.titulo {
+  text-align: center;
+  color: #EAFFD7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+.concepto {
+  background-color: rgba(115, 160, 115, 0.9);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  border: 0.15rem solid white;
+  margin: 3vw;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.remarcado {
+  font-size: 120%;
+  color: #EDFCE1;
+}
+abbr {
+  color: #dbdd7b;
+  text-decoration: none;
+}
+
+/*IMÁGENES*/
+.imagen {
+  border: 2px solid #C0F0A7;
+  border-style: double;
+  border-radius: 1.5rem;
+  border-width: 0.5rem;
+}
+.imgright {
+  width:40%;
+  height:40%;
+  float:right;
+  margin-right:4rem;
+}
+.imgleft {
+  width:40%;
+  height:40%;
+  float:left;
+  margin-left:4rem;
+}
+.pieimg {
+  text-align: center;
+  color: #EAFFD7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+a img {
+  transition: box-shadow 0.3s ease;
+}
+a img.imagen:hover {
+  box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.3);
+}
+
+/*IMAP*/
+#imap {
+  width: 49rem;
+  height: 34rem;
+}
+#maptext {
+  text-align: center;
+  color: #EAFFD7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/*TABLA*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td {
+	border: solid 0.05rem #000;
+	padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+th {
+	background-color: rgba(104, 158, 104, 0.9);
+	color: white;
+	text-align: left;
+}
+tr:nth-child(even) {
+	background-color: rgba(131, 182, 131, 0.9);
+	color: white;
+}
+tr:nth-child(odd) {
+	background-color: rgba(100, 139, 100, 0.9);
+	color: white;
+}
+tr:hover {
+	background-color: lightgreen;
+  color: black;
+	cursor: default;
+}
+
+/*FOOTER*/
+footer {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 1rem auto;
+  background-color: #222;
+  padding: 1rem 2rem;
+}
+footer div {
+  display: flex;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+footer p {
+  display: flex;
+  text-align: left;
+  flex:20%;
+  color: white;
+}
+footer a {
+  display: flex; 
+  flex-direction: column;
+  flex:80%;
+  text-align: right;
+  transition: color 0.3s ease;
+  color:#fff;
+  text-decoration: none;
+  padding:0.5vw;
+}
+footer a:link {
+  color: white;
+}
+footer a:visited {
+  color: rgba(73, 134, 76, 0.74);
+}
+footer a:hover {
+  color: lightgreen;
+}
+footer a:active{
+  color: rgb(216, 255, 144);
+}
+
+/*FORMULARIOS Y LISTAS*/
+form {
+  margin: 0 auto;
+  width: 23rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid lightgreen;
+  border-radius: 1rem;
+  background-color: rgba(115, 160, 115, 0.9);
+}
+ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+form li + li {
+  margin-top: 1em;
+}
+label {
+  display: inline-block;
+  width: 6rem;
+  text-align: right;
+}
+input:invalid {
+  border: 0.1rem solid rgb(255, 74, 74);
+  border-style: inset;
+}
+input:valid {
+  border: none;
+}
+input, textarea {
+  font-family: 'Raleway', 'Courier New', Courier, monospace;
+  width: 12rem;
+  box-sizing: border-box;
+  border: 0.1rem solid rgba(73, 134, 76, 0.74);
+}
+li input:focus, li textarea:focus {
+  border-color: #000;
+  width: 15rem;
+}
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: top;
+  height: 5rem;
+  resize: none;
+}
+.button {
+  padding-left: 5rem;
+}
+button {
+  margin-left: 1.3rem;
+  font-family: 'Raleway', 'Courier New', Courier, monospace;
+}
+#letrasFormulario {
+  color: #EAFFD7;
+  font-family: 'Raleway', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+article #agradecimiento {
+  display: flex;
+  flex-direction: column;
+}
+#agradecimiento {
+  flex:100%;
+  text-align: center;
+  margin-top: 10vw;
+}
+fieldset {
+  margin: 0.5rem 1rem;
+  border: 0.1rem solid lightgreen;
+  border-radius: 1rem;
+}
+legend a:link{
+  color: #C0F0A7;
+}
+legend a:visited{
+  color: rgba(189, 189, 189, 0.74);
+}
+legend a:hover{
+  color: lightgreen;
+}
+legend a:active{
+  color: rgb(216, 255, 144);
+}
+.abbr {
+  color: rgb(233, 12, 12);
+  text-decoration: none;
+}
+fieldset input {
+  float:right;
+}
+.form {
+  list-style: none;
+}
+
+/* MEDIA - RESPONSIVE */
+@media (max-width: 70rem) {
+  main {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer a {
+    text-align: center;
+  }
+  iframe {
+    height: 36vw;
+    width: 64vw;
+  }
+  .right {
+    margin-right: 4vw;
+  }
+  .left {
+    margin-left: 4vw;
+  }
+  #imap {
+    height: 40vw;
+    width: 55vw;
+  }
+  map {
+    display: none;
+  }
+  #maptext {
+    display: none;
+  }
+  th, td {
+   padding: 0.1rem;
+   font-size: 1.9vw;
+   }
+}
